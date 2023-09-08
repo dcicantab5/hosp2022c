@@ -6,15 +6,32 @@
       "description": "Some additional details about the website",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2023-09-08T09:17:19+08:00"
+      "last_modified": "2023-09-08T09:35:49+08:00"
+    },
+    {
+      "path": "hosp2022c.html",
+      "title": "General Internal Medicine Shared Admissions Workload 2022",
+      "author": [
+        {
+          "name": "Dr Saiful Safuan Md Sani",
+          "url": "https://saifulsafuan.com"
+        },
+        {
+          "name": "Dr Yoon Chee Kin",
+          "url": {}
+        }
+      ],
+      "date": "`2023-09-01`",
+      "contents": "\n\nContents\nShared General Medical Admissions Workload\nSpecialist (per 1000 Admissions) Handling Shared General Medical Admissions Workload by Type of Facility 2022\nSpecialist Adequacy Calculation\nSpecialist Adequacy 2022\n\nShared General Medical Admissions Workload\n\n\n\n\nFigure 1: General Medical Admissions.\n\n\n\nReturn to table of contents\n\nSpecialist (per 1000 Admissions) Handling Shared General Medical Admissions Workload by Type of Facility 2022\n\n\n\n\n\n\n\nFigure 2: Specialist (per 1000 Admissions) Handling Shared General Medical Admissions Workload 2022.\n\n\n\nSpecialist Adequacy Calculation\n\n\\[\\begin{equation}\n{Adequacy = {Number\\;of\\;specialists}_{Actual} - {Number\\;of\\;specialists}_{Median}}\n\\tag{1}\n\\end{equation}\\]\n\nderived from\n\\[\\begin{equation}\n{{Number\\;of\\; specialists}_{Median} = {Manpower\\;Rate}_{Median} \\times  \\left( \\displaystyle \\frac{Admissions}{1000}\\right) }\n\\tag{2}\n\\end{equation}\\]\n\nderived from\n\\[\\begin{equation}\n{Manpower\\;Rate = {Number\\;of\\; specialists} \\div \\left( \\displaystyle \\frac{Admissions}{1000}\\right) }\n\\tag{3}\n\\end{equation}\\]\n\nReturn to table of contents\n\nSpecialist Adequacy 2022\n\n\n\n\nFigure 3: Specialist Excesses and Shortages. Negative values are shortages, and positive values are excesses. See equations 1-3 for formulae to derive values.\n\n\n\n\nReturn to table of contents\n\n\n\n",
+      "last_modified": "2023-09-08T09:35:55+08:00"
     },
     {
       "path": "index.html",
-      "title": "hosp2022c",
-      "description": "Welcome to the website. I hope you enjoy it!\n",
+      "title": "General Medical Admissions Workload 2022 and Specialist Adequacy",
+      "description": "***Curated by Dr Saiful Safuan Md Sani*** \n<br> _MRCP(London) MRCP(UK) MA(Cantab) MBBS(London)_\n<br> _Consultant Physician (Acute Internal Medicine)_\n",
       "author": [],
-      "contents": "\n\n\n\n",
-      "last_modified": "2023-09-08T09:17:20+08:00"
+      "contents": "\nWorkload should dictate amount of manpower.\n\nCAUTION: fair distribution requires consideration and information on:\n 1. outpatient clinic volume,\n 2. daycare volume,\n 3. procedure volume,\n 4. referral workload,\n 5. fulfilling demands for up-to-date treatment provided by a subspecialty.\n\n\n\n\n",
+      "last_modified": "2023-09-08T09:35:56+08:00"
     }
   ],
   "collections": []

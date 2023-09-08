@@ -1,12 +1,13 @@
-name: "hosp2022c"
-title: "hosp2022c"
+name: "hosp2022"
+title: "General Medical Admissions Workload 2022 and Specialist Adequacy"
 description: |
-  hosp2022c
+  General Medical Admissions Workload 2022 and Specialist Adequacy.
 output_dir: "docs"
+google_analytics: 
 navbar:
   right:
-    - text: "Home"
-      href: index.html
-    - text: "About"
-      href: about.html
+    - text: "Intro"
+      href: Index.html
+    - text: "Inpatient 2022"
+      href: hosp2022c.html
 output: distill::distill_article

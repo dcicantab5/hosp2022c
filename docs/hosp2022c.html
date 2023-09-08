@@ -88,29 +88,31 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>General Medical Admissions Workload 2022 and Specialist Adequacy</title>
-
-  <meta property="description" itemprop="description" content="***Curated by Dr Saiful Safuan Md Sani*** &#10;&lt;br&gt; _MRCP(London) MRCP(UK) MA(Cantab) MBBS(London)_&#10;&lt;br&gt; _Consultant Physician (Acute Internal Medicine)_"/>
+  <title>General Medical Admissions Workload 2022 and Specialist Adequacy: General Internal Medicine Shared Admissions Workload 2022</title>
 
 
+
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2023-09-01"/>
+  <meta property="article:created" itemprop="dateCreated" content="2023-09-01"/>
+  <meta name="article:author" content="Dr Saiful Safuan Md Sani"/>
+  <meta name="article:author" content="Dr Yoon Chee Kin"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="General Medical Admissions Workload 2022 and Specialist Adequacy"/>
+  <meta property="og:title" content="General Medical Admissions Workload 2022 and Specialist Adequacy: General Internal Medicine Shared Admissions Workload 2022"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="***Curated by Dr Saiful Safuan Md Sani*** &#10;&lt;br&gt; _MRCP(London) MRCP(UK) MA(Cantab) MBBS(London)_&#10;&lt;br&gt; _Consultant Physician (Acute Internal Medicine)_"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="General Medical Admissions Workload 2022 and Specialist Adequacy"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="General Medical Admissions Workload 2022 and Specialist Adequacy"/>
-  <meta property="twitter:description" content="***Curated by Dr Saiful Safuan Md Sani*** &#10;&lt;br&gt; _MRCP(London) MRCP(UK) MA(Cantab) MBBS(London)_&#10;&lt;br&gt; _Consultant Physician (Acute Internal Medicine)_"/>
+  <meta property="twitter:title" content="General Medical Admissions Workload 2022 and Specialist Adequacy: General Internal Medicine Shared Admissions Workload 2022"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","site"]}},"value":[{"type":"character","attributes":{},"value":["General Medical Admissions Workload 2022 and Specialist Adequacy"]},{"type":"character","attributes":{},"value":["***Curated by Dr Saiful Safuan Md Sani*** \n<br> _MRCP(London) MRCP(UK) MA(Cantab) MBBS(London)_\n<br> _Consultant Physician (Acute Internal Medicine)_\n"]},{"type":"character","attributes":{},"value":["distill::distill_website"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","author","date","output","always_allow_html"]}},"value":[{"type":"character","attributes":{},"value":["General Internal Medicine Shared Admissions Workload 2022"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["Dr Saiful Safuan Md Sani"]},{"type":"character","attributes":{},"value":["https://saifulsafuan.com"]},{"type":"character","attributes":{},"value":["Clinical Research Centre & Department of Medicine Hospital Kuala Lumpur"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation"]}},"value":[{"type":"character","attributes":{},"value":["Dr Yoon Chee Kin"]},{"type":"character","attributes":{},"value":["Clinical Research Centre & Department of Medicine Hospital Pulau Pinang"]}]}]},{"type":"character","attributes":{},"value":["`2023-09-01`"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_float"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]}]}]},{"type":"logical","attributes":{},"value":[true]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2075,6 +2077,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   <!--/radix_placeholder_distill-->
   <script src="site_libs/header-attrs-2.23/header-attrs.js"></script>
+  <script src="site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+  <script src="site_libs/plotly-binding-4.10.2/plotly.js"></script>
+  <script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+  <script src="site_libs/jquery-3.5.1/jquery.min.js"></script>
+  <link href="site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+  <script src="site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+  <link href="site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+  <script src="site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2094,7 +2104,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"General Medical Admissions Workload 2022 and Specialist Adequacy","description":"***Curated by Dr Saiful Safuan Md Sani*** \n<br> _MRCP(London) MRCP(UK) MA(Cantab) MBBS(London)_\n<br> _Consultant Physician (Acute Internal Medicine)_","authors":[]}
+{"title":"General Internal Medicine Shared Admissions Workload 2022","authors":[{"author":"Dr Saiful Safuan Md Sani","authorURL":"https://saifulsafuan.com","affiliation":"Clinical Research Centre & Department of Medicine Hospital Kuala Lumpur","affiliationURL":"#","orcidID":""},{"author":"Dr Yoon Chee Kin","authorURL":"#","affiliation":"Clinical Research Centre & Department of Medicine Hospital Pulau Pinang","affiliationURL":"#","orcidID":""}],"publishedDate":"2023-09-01T00:00:00.000+08:00","citationText":"Sani & Kin, 2023"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2116,30 +2126,90 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>General Medical Admissions Workload 2022 and Specialist Adequacy</h1>
+<h1>General Internal Medicine Shared Admissions Workload 2022</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p><strong><em>Curated by Dr Saiful Safuan Md Sani</em></strong>
-<br> <em>MRCP(London) MRCP(UK) MA(Cantab) MBBS(London)</em>
-<br> <em>Consultant Physician (Acute Internal Medicine)</em></p></p>
+
 </div>
 
+<div class="d-byline">
+  Dr Saiful Safuan Md Sani <a href="https://saifulsafuan.com" class="uri">https://saifulsafuan.com</a> (Clinical Research Centre &amp; Department of Medicine Hospital Kuala Lumpur)
+  
+,   Dr Yoon Chee Kin  (Clinical Research Centre &amp; Department of Medicine Hospital Pulau Pinang)
+  
+<br/><code>2023-09-01</code>
+</div>
 
 <div class="d-article">
-<style type="text/css">
-body{ /* Normal  */
-      font-size: 8px;
-  }
-</style>
-<p><strong><em>Workload should dictate amount of manpower.</em></strong></p>
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#shared-general-medical-admissions-workload" id="toc-shared-general-medical-admissions-workload">Shared General Medical Admissions Workload</a></li>
+<li><a href="#specialist-per-1000-admissions-handling-shared-general-medical-admissions-workload-by-type-of-facility-2022" id="toc-specialist-per-1000-admissions-handling-shared-general-medical-admissions-workload-by-type-of-facility-2022">Specialist (per 1000 Admissions) Handling Shared General Medical Admissions Workload by Type of Facility 2022</a></li>
+<li><a href="#specialist-adequacy-calculation" id="toc-specialist-adequacy-calculation">Specialist Adequacy Calculation</a></li>
+<li><a href="#specialist-adequacy-2022" id="toc-specialist-adequacy-2022">Specialist Adequacy 2022</a></li>
+</ul>
+</nav>
+</div>
+<h2 id="shared-general-medical-admissions-workload">Shared General Medical Admissions Workload</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-34ec660386594e96edff" style="width:768px;height:960px;"></div>
+<script type="application/json" data-for="htmlwidget-34ec660386594e96edff">{"x":{"data":[{"y":["QUEEN ELIZABETH 1","PULAU PINANG","RAJA PEREMPUAN ZAINAB 2 KOTA BHARU","TUANKU FAUZIAH","TENGKU AMPUAN AFZAN KUANTAN","RAJA PERMAISURI BAINUN","UMUM SARAWAK","SULTANAH BAHIYAH","TUANKU JA'AFAR SEREMBAN","MELAKA","SULTANAH NUR ZAHIRAH KUALA TERENGGANU","SULTANAH AMINAH JOHOR BAHRU","KUALA LUMPUR","TENGKU AMPUAN RAHIMAH KLANG"],"x":[3427,4033,8468,8892,9978,11130,12716,12968,16600,17574,17926,19032,23302,27868],"type":"bar","showlegend":true,"orientation":"h","name":"STATE","textfont":{"color":"rgba(21,3,119,0.97)","size":55},"error_y":{"color":"rgba(21,3,119,0.97)","width":55},"error_x":{"color":"rgba(21,3,119,0.97)","width":55},"marker":{"color":"rgba(21,3,119,0.97)","line":{"color":"rgba(21,3,119,1)"}},"xaxis":"x","yaxis":"y","frame":null},{"y":["DUCHESS OF KENT SANDAKAN","SELAYANG","TANAH MERAH","MIRI","QUEEN ELIZABETH 2","SIBU","SULTAN ISMAIL PETRA KUALA KRAI","PUTRAJAYA","TAWAU","KEMAMAN","BINTULU","SEGAMAT","KULIM","TUANKU AMPUAN NAJIHAH KUALA PILAH","TELUK INTAN","KAJANG","SULTAN HJ AHMAD SHAH TEMERLOH","SEBERANG JAYA","PAKAR SULTANAH FATIMAH MUAR","SHAH ALAM","SULTAN ISMAIL JOHOR BAHRU","AMPANG","SULTAN ABDUL HALIM SG PETANI","SERDANG","SULTANAH NORA ISMAIL BATU PAHAT","TAIPING","SUNGAI BULOH"],"x":[3523,3620,3643,3770,3895,4282,4322,4448,4450,4533,5313,6237,8209,8379,8383,8748,8898,10492,10806,11660,11902,12184,12793,13322,14048,15710,24500],"type":"bar","showlegend":true,"orientation":"h","name":"MAJOR","textfont":{"color":"rgba(250,128,114,0.97)","size":55},"error_y":{"color":"rgba(250,128,114,0.97)","width":55},"error_x":{"color":"rgba(250,128,114,0.97)","width":55},"marker":{"color":"rgba(250,128,114,0.97)","line":{"color":"rgba(250,128,114,1)"}},"xaxis":"x","yaxis":"y","frame":null},{"y":["SLIM RIVER","KAPIT","SERIAN","LABUAN","PEKAN","SRI AMAN","KUALA LIPIS","BENTONG","PORT DICKSON","SARIKEI","LAHAD DATU","SULTANAH MALIHA LANGKAWI","KENINGAU","BANTING","ENCHE' BESAR HAJJAH KHALSOM KLUANG","BUKIT MERTAJAM","SERI MANJUNG"],"x":[1694,2022,2172,2264,2618,2697,2933,3037,3620,3677,3787,4182,5669,6292,7250,8311,9372],"type":"bar","showlegend":true,"orientation":"h","name":"MINOR","textfont":{"color":"rgba(190,190,190,0.97)","size":55},"error_y":{"color":"rgba(190,190,190,0.97)","width":55},"error_x":{"color":"rgba(190,190,190,0.97)","width":55},"marker":{"color":"rgba(190,190,190,0.97)","line":{"color":"rgba(190,190,190,1)"}},"xaxis":"x","yaxis":"y","frame":null},{"y":["PAPAR","SIK","BESUT"],"x":[2269,3069,4106],"type":"bar","showlegend":true,"orientation":"h","name":"NONSPECIALIST","textfont":{"color":"rgba(173,216,230,0.97)","size":55},"error_y":{"color":"rgba(173,216,230,0.97)","width":55},"error_x":{"color":"rgba(173,216,230,0.97)","width":55},"marker":{"color":"rgba(173,216,230,0.97)","line":{"color":"rgba(173,216,230,1)"}},"xaxis":"x","yaxis":"y","frame":null}],"layout":{"xaxis":{"domain":[0,1],"automargin":true,"anchor":"y","title":"Number of admissions"},"yaxis":{"domain":[0,1],"automargin":true,"type":"category","categoryorder":"array","categoryarray":["SLIM RIVER","KAPIT","SERIAN","LABUAN","PAPAR","PEKAN","SRI AMAN","KUALA LIPIS","BENTONG","SIK","QUEEN ELIZABETH 1","DUCHESS OF KENT SANDAKAN","PORT DICKSON","SELAYANG","TANAH MERAH","SARIKEI","MIRI","LAHAD DATU","QUEEN ELIZABETH 2","PULAU PINANG","BESUT","SULTANAH MALIHA LANGKAWI","SIBU","SULTAN ISMAIL PETRA KUALA KRAI","PUTRAJAYA","TAWAU","KEMAMAN","BINTULU","KENINGAU","SEGAMAT","BANTING","ENCHE' BESAR HAJJAH KHALSOM KLUANG","KULIM","BUKIT MERTAJAM","TUANKU AMPUAN NAJIHAH KUALA PILAH","TELUK INTAN","RAJA PEREMPUAN ZAINAB 2 KOTA BHARU","KAJANG","TUANKU FAUZIAH","SULTAN HJ AHMAD SHAH TEMERLOH","SERI MANJUNG","TENGKU AMPUAN AFZAN KUANTAN","SEBERANG JAYA","PAKAR SULTANAH FATIMAH MUAR","RAJA PERMAISURI BAINUN","SHAH ALAM","SULTAN ISMAIL JOHOR BAHRU","AMPANG","UMUM SARAWAK","SULTAN ABDUL HALIM SG PETANI","SULTANAH BAHIYAH","SERDANG","SULTANAH NORA ISMAIL BATU PAHAT","TAIPING","TUANKU JA'AFAR SEREMBAN","MELAKA","SULTANAH NUR ZAHIRAH KUALA TERENGGANU","SULTANAH AMINAH JOHOR BAHRU","KUALA LUMPUR","SUNGAI BULOH","TENGKU AMPUAN RAHIMAH KLANG"],"anchor":"x","title":"","tickfont":{"size":10}},"annotations":[{"x":1,"y":0.51000000000000001,"text":"","showarrow":false,"xref":"paper","yref":"paper","xanchor":"right","yanchor":"auto","xshift":0,"yshift":0,"font":{"size":12,"color":"grey"}},{"x":1,"y":0.51000000000000001,"text":"","showarrow":false,"xref":"paper","yref":"paper","xanchor":"right","yanchor":"auto","xshift":0,"yshift":0,"font":{"size":12,"color":"grey"}}],"shapes":[],"images":[],"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":true,"title":"Shared General Medical Admissions Workload<br><sup><\/sup>","legend":{"x":0.77000000000000002,"y":0.90000000000000002}},"attrs":{"77461f63bb9e":{"y":{},"x":{},"size":7,"alpha":0.96999999999999997,"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar","color":{},"colors":["#150377","salmon","grey","light blue"],"showlegend":true,"inherit":true}},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"subplot":true,"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p class="caption">
+Figure 1: General Medical Admissions.
+</p>
+</div>
+</div>
+<p><a href="#top">Return to table of contents</a></p>
+<div style="page-break-after: always;"></div>
+<h2 id="specialist-per-1000-admissions-handling-shared-general-medical-admissions-workload-by-type-of-facility-2022">Specialist (per 1000 Admissions) Handling Shared General Medical Admissions Workload by Type of Facility 2022</h2>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-1af2f44d830c87a6d43b" style="width:768px;height:960px;"></div>
+<script type="application/json" data-for="htmlwidget-1af2f44d830c87a6d43b">{"x":{"data":[{"y":["QUEEN ELIZABETH 1","PULAU PINANG","RAJA PEREMPUAN ZAINAB 2 KOTA BHARU","RAJA PERMAISURI BAINUN","UMUM SARAWAK","TENGKU AMPUAN AFZAN KUANTAN","SULTANAH BAHIYAH","KUALA LUMPUR","TUANKU JA'AFAR SEREMBAN","SULTANAH AMINAH JOHOR BAHRU","MELAKA","SULTANAH NUR ZAHIRAH KUALA TERENGGANU","TENGKU AMPUAN RAHIMAH KLANG","TUANKU FAUZIAH"],"x":[13.699999999999999,10.4,4.7000000000000002,4.2000000000000002,4,3.7999999999999998,3.2000000000000002,2.8999999999999999,2.7999999999999998,2.5,2.2999999999999998,2.1000000000000001,1.8,1.2],"name":"States","type":"bar","orientation":"h","marker":{"color":"rgba(21,3,119,1)","line":{"color":"rgba(21,3,119,1)"}},"textfont":{"color":"rgba(21,3,119,1)"},"error_y":{"color":"rgba(21,3,119,1)"},"error_x":{"color":"rgba(21,3,119,1)"},"xaxis":"x","yaxis":"y","frame":null},{"y":["QUEEN ELIZABETH 1","PULAU PINANG","RAJA PEREMPUAN ZAINAB 2 KOTA BHARU","RAJA PERMAISURI BAINUN","UMUM SARAWAK","TENGKU AMPUAN AFZAN KUANTAN","SULTANAH BAHIYAH","KUALA LUMPUR","TUANKU JA'AFAR SEREMBAN","SULTANAH AMINAH JOHOR BAHRU","MELAKA","SULTANAH NUR ZAHIRAH KUALA TERENGGANU","TENGKU AMPUAN RAHIMAH KLANG","TUANKU FAUZIAH"],"x":[3,3,3,3,3,3,3,3,3,3,3,3,3,3],"name":"Median","type":"scatter","mode":"lines","line":{"color":"crimson","dash":"dot","width":7},"opacity":0.96999999999999997,"marker":{"color":"rgba(21,3,119,1)","line":{"color":"rgba(21,3,119,1)"}},"textfont":{"color":"rgba(21,3,119,1)"},"error_y":{"color":"rgba(21,3,119,1)"},"error_x":{"color":"rgba(21,3,119,1)"},"xaxis":"x","yaxis":"y","frame":null},{"y":["SELAYANG","PUTRAJAYA","MIRI","QUEEN ELIZABETH 2","SIBU","SERDANG","DUCHESS OF KENT SANDAKAN","TAWAU","SEGAMAT","SULTAN ISMAIL JOHOR BAHRU","PAKAR SULTANAH FATIMAH MUAR","KAJANG","TANAH MERAH","KULIM","SEBERANG JAYA","TAIPING","SULTAN ABDUL HALIM SG PETANI","SULTAN ISMAIL PETRA KUALA KRAI","AMPANG","BINTULU","KEMAMAN","SHAH ALAM","SULTAN HJ AHMAD SHAH TEMERLOH","SULTANAH NORA ISMAIL BATU PAHAT","TUANKU AMPUAN NAJIHAH KUALA PILAH","SUNGAI BULOH","TELUK INTAN"],"x":[11.6,3.3999999999999999,3.2000000000000002,3.1000000000000001,3,2.8999999999999999,2.2999999999999998,2.2000000000000002,1.8999999999999999,1.8,1.7,1.6000000000000001,1.6000000000000001,1.5,1.5,1.3,1.2,1.2,1.1000000000000001,1.1000000000000001,1.1000000000000001,1.1000000000000001,1.1000000000000001,1,0.80000000000000004,0.69999999999999996,0.40000000000000002],"name":"Major","type":"bar","orientation":"h","marker":{"color":"rgba(250,128,114,1)","line":{"color":"rgba(250,128,114,1)"}},"textfont":{"color":"rgba(250,128,114,1)"},"error_y":{"color":"rgba(250,128,114,1)"},"error_x":{"color":"rgba(250,128,114,1)"},"xaxis":"x","yaxis":"y2","frame":null},{"y":["SELAYANG","PUTRAJAYA","MIRI","QUEEN ELIZABETH 2","SIBU","SERDANG","DUCHESS OF KENT SANDAKAN","TAWAU","SEGAMAT","SULTAN ISMAIL JOHOR BAHRU","PAKAR SULTANAH FATIMAH MUAR","KAJANG","TANAH MERAH","KULIM","SEBERANG JAYA","TAIPING","SULTAN ABDUL HALIM SG PETANI","SULTAN ISMAIL PETRA KUALA KRAI","AMPANG","BINTULU","KEMAMAN","SHAH ALAM","SULTAN HJ AHMAD SHAH TEMERLOH","SULTANAH NORA ISMAIL BATU PAHAT","TUANKU AMPUAN NAJIHAH KUALA PILAH","SUNGAI BULOH","TELUK INTAN"],"x":[1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5],"name":"Median","type":"scatter","mode":"lines","line":{"color":"crimson","dash":"dot","width":7},"opacity":0.96999999999999997,"marker":{"color":"rgba(250,128,114,1)","line":{"color":"rgba(250,128,114,1)"}},"textfont":{"color":"rgba(250,128,114,1)"},"error_y":{"color":"rgba(250,128,114,1)"},"error_x":{"color":"rgba(250,128,114,1)"},"xaxis":"x","yaxis":"y2","frame":null},{"y":["ENCHE' BESAR HAJJAH KHALSOM KLUANG","SLIM RIVER","KUALA LIPIS","BENTONG","LABUAN","LAHAD DATU","PEKAN","SARIKEI","SERI MANJUNG","SERIAN","BANTING","PORT DICKSON","SRI AMAN","KAPIT","KENINGAU","BUKIT MERTAJAM","SULTANAH MALIHA LANGKAWI"],"x":[2.2000000000000002,1.8,1.7,1.6000000000000001,1.3,1.3,1.1000000000000001,1.1000000000000001,1.1000000000000001,0.90000000000000002,0.80000000000000004,0.80000000000000004,0.69999999999999996,0.5,0.5,0.20000000000000001,0.20000000000000001],"name":"Minor","type":"bar","orientation":"h","marker":{"color":"rgba(190,190,190,1)","line":{"color":"rgba(190,190,190,1)"}},"textfont":{"color":"rgba(190,190,190,1)"},"error_y":{"color":"rgba(190,190,190,1)"},"error_x":{"color":"rgba(190,190,190,1)"},"xaxis":"x","yaxis":"y3","frame":null},{"y":["ENCHE' BESAR HAJJAH KHALSOM KLUANG","SLIM RIVER","KUALA LIPIS","BENTONG","LABUAN","LAHAD DATU","PEKAN","SARIKEI","SERI MANJUNG","SERIAN","BANTING","PORT DICKSON","SRI AMAN","KAPIT","KENINGAU","BUKIT MERTAJAM","SULTANAH MALIHA LANGKAWI"],"x":[1.1000000000000001,1.1000000000000001,1.1000000000000001,1.1000000000000001,1.1000000000000001,1.1000000000000001,1.1000000000000001,1.1000000000000001,1.1000000000000001,1.1000000000000001,1.1000000000000001,1.1000000000000001,1.1000000000000001,1.1000000000000001,1.1000000000000001,1.1000000000000001,1.1000000000000001],"name":"Median","type":"scatter","mode":"lines","line":{"color":"crimson","dash":"dot","width":7},"opacity":0.96999999999999997,"marker":{"color":"rgba(190,190,190,1)","line":{"color":"rgba(190,190,190,1)"}},"textfont":{"color":"rgba(190,190,190,1)"},"error_y":{"color":"rgba(190,190,190,1)"},"error_x":{"color":"rgba(190,190,190,1)"},"xaxis":"x","yaxis":"y3","frame":null}],"layout":{"xaxis":{"domain":[0,1],"automargin":true,"title":"Number of specialists per 1000 admissions","anchor":"y3"},"yaxis3":{"domain":[0,0.23000000000000001],"automargin":true,"title":"","categoryorder":"total ascending","tickfont":{"size":8},"type":"category","categoryarray":["BANTING","BENTONG","BUKIT MERTAJAM","ENCHE' BESAR HAJJAH KHALSOM KLUANG","KAPIT","KENINGAU","KUALA LIPIS","LABUAN","LAHAD DATU","PEKAN","PORT DICKSON","SARIKEI","SERI MANJUNG","SERIAN","SLIM RIVER","SRI AMAN","SULTANAH MALIHA LANGKAWI"],"anchor":"x"},"yaxis2":{"domain":[0.27000000000000002,0.72999999999999998],"automargin":true,"title":"","categoryorder":"total ascending","tickfont":{"size":8},"type":"category","categoryarray":["AMPANG","BINTULU","DUCHESS OF KENT SANDAKAN","KAJANG","KEMAMAN","KULIM","MIRI","PAKAR SULTANAH FATIMAH MUAR","PUTRAJAYA","QUEEN ELIZABETH 2","SEBERANG JAYA","SEGAMAT","SELAYANG","SERDANG","SHAH ALAM","SIBU","SULTAN ABDUL HALIM SG PETANI","SULTAN HJ AHMAD SHAH TEMERLOH","SULTAN ISMAIL JOHOR BAHRU","SULTAN ISMAIL PETRA KUALA KRAI","SULTANAH NORA ISMAIL BATU PAHAT","SUNGAI BULOH","TAIPING","TANAH MERAH","TAWAU","TELUK INTAN","TUANKU AMPUAN NAJIHAH KUALA PILAH"],"anchor":"x"},"yaxis":{"domain":[0.77000000000000002,1],"automargin":true,"title":"","categoryorder":"total ascending","tickfont":{"size":8},"type":"category","categoryarray":["KUALA LUMPUR","MELAKA","PULAU PINANG","QUEEN ELIZABETH 1","RAJA PEREMPUAN ZAINAB 2 KOTA BHARU","RAJA PERMAISURI BAINUN","SULTANAH AMINAH JOHOR BAHRU","SULTANAH BAHIYAH","SULTANAH NUR ZAHIRAH KUALA TERENGGANU","TENGKU AMPUAN AFZAN KUANTAN","TENGKU AMPUAN RAHIMAH KLANG","TUANKU FAUZIAH","TUANKU JA'AFAR SEREMBAN","UMUM SARAWAK"],"anchor":"x"},"annotations":[],"shapes":[],"images":[],"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":true,"title":{"text":"Specialist (per 1000 Admissions) by Type of Facility 2022"}},"attrs":{"77465f9a6c63":{"y":{},"x":{},"name":"States","color":{},"colors":["#150377","salmon","grey","light blue"],"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"},"77465f9a6c63.1":{"y":{},"x":{},"name":"Median","color":{},"colors":["#150377","salmon","grey","light blue"],"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","mode":"lines","line":{"color":"crimson","dash":"dot","width":7},"opacity":0.96999999999999997,"inherit":true},"77461342089e":{"y":{},"x":{},"name":"Major","color":{},"colors":["#150377","salmon","grey","light blue"],"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"},"77461342089e.1":{"y":{},"x":{},"name":"Median","color":{},"colors":["#150377","salmon","grey","light blue"],"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","mode":"lines","line":{"color":"crimson","dash":"dot","width":7},"opacity":0.96999999999999997,"inherit":true},"77465443c6f2":{"y":{},"x":{},"name":"Minor","color":{},"colors":["#150377","salmon","grey","light blue"],"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"},"77465443c6f2.1":{"y":{},"x":{},"name":"Median","color":{},"colors":["#150377","salmon","grey","light blue"],"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","mode":"lines","line":{"color":"crimson","dash":"dot","width":7},"opacity":0.96999999999999997,"inherit":true}},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"subplot":true,"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p class="caption">
+Figure 2: Specialist (per 1000 Admissions) Handling Shared General Medical Admissions Workload 2022.
+</p>
+</div>
+</div>
+<h2 id="specialist-adequacy-calculation">Specialist Adequacy Calculation</h2>
 <p><br></p>
-<p><strong>CAUTION</strong>: fair distribution requires consideration and information on:
-<br> 1. outpatient clinic volume,
-<br> 2. daycare volume,
-<br> 3. procedure volume,
-<br> 4. referral workload,
-<br> 5. fulfilling demands for up-to-date treatment provided by a subspecialty.</p>
+<p><span class="math display" id="eq:Adeq">\[\begin{equation}
+{Adequacy = {Number\;of\;specialists}_{Actual} - {Number\;of\;specialists}_{Median}}
+\tag{1}
+\end{equation}\]</span></p>
 <p><br></p>
+<p>derived from</p>
+<p><span class="math display" id="eq:MRn">\[\begin{equation}
+{{Number\;of\; specialists}_{Median} = {Manpower\;Rate}_{Median} \times  \left( \displaystyle \frac{Admissions}{1000}\right) }
+\tag{2}
+\end{equation}\]</span></p>
+<p><br></p>
+<p>derived from</p>
+<p><span class="math display" id="eq:MR">\[\begin{equation}
+{Manpower\;Rate = {Number\;of\; specialists} \div \left( \displaystyle \frac{Admissions}{1000}\right) }
+\tag{3}
+\end{equation}\]</span></p>
+<p><br></p>
+<p><a href="#top">Return to table of contents</a></p>
+<div style="page-break-after: always;"></div>
+<h2 id="specialist-adequacy-2022">Specialist Adequacy 2022</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-bb5d7898055aafc8f673" style="width:768px;height:768px;"></div>
+<script type="application/json" data-for="htmlwidget-bb5d7898055aafc8f673">{"x":{"data":[{"y":["TENGKU AMPUAN RAHIMAH KLANG","SULTANAH NUR ZAHIRAH KUALA TERENGGANU","TUANKU FAUZIAH","MELAKA","SULTANAH AMINAH JOHOR BAHRU","TUANKU JA'AFAR SEREMBAN","KUALA LUMPUR","SULTANAH BAHIYAH","TENGKU AMPUAN AFZAN KUANTAN","UMUM SARAWAK","RAJA PERMAISURI BAINUN","RAJA PEREMPUAN ZAINAB 2 KOTA BHARU","PULAU PINANG","QUEEN ELIZABETH 1"],"x":[-34,-16,-16,-12,-10,-4,-3,2,8,12,13,14,30,37],"type":"scatter","mode":"markers","showlegend":true,"name":"STATE","marker":{"color":"rgba(21,3,119,0.97)","size":[55,55,55,55,55,55,55,55,55,55,55,55,55,55],"sizemode":"area","line":{"color":"rgba(21,3,119,1)"}},"textfont":{"color":"rgba(21,3,119,0.97)","size":55},"error_y":{"color":"rgba(21,3,119,0.97)","width":55},"error_x":{"color":"rgba(21,3,119,0.97)","width":55},"line":{"color":"rgba(21,3,119,0.97)","width":55},"xaxis":"x","yaxis":"y","frame":null},{"y":["SUNGAI BULOH","TELUK INTAN","SULTANAH NORA ISMAIL BATU PAHAT","AMPANG","TUANKU AMPUAN NAJIHAH KUALA PILAH","SHAH ALAM","SULTAN ABDUL HALIM SG PETANI","SULTAN HJ AHMAD SHAH TEMERLOH","TAIPING","BINTULU","KEMAMAN","SULTAN ISMAIL PETRA KUALA KRAI","KULIM","SEBERANG JAYA","TANAH MERAH","KAJANG","PAKAR SULTANAH FATIMAH MUAR","SEGAMAT","DUCHESS OF KENT SANDAKAN","SULTAN ISMAIL JOHOR BAHRU","TAWAU","MIRI","QUEEN ELIZABETH 2","SIBU","PUTRAJAYA","SERDANG","SELAYANG"],"x":[-21,-10,-7,-6,-6,-5,-5,-4,-4,-2,-2,-2,-1,0,0,1,2,2,3,3,3,6,6,6,8,18,36],"type":"scatter","mode":"markers","showlegend":true,"name":"MAJOR","marker":{"color":"rgba(250,128,114,0.97)","size":[55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55],"sizemode":"area","line":{"color":"rgba(250,128,114,1)"}},"textfont":{"color":"rgba(250,128,114,0.97)","size":55},"error_y":{"color":"rgba(250,128,114,0.97)","width":55},"error_x":{"color":"rgba(250,128,114,0.97)","width":55},"line":{"color":"rgba(250,128,114,0.97)","width":55},"xaxis":"x","yaxis":"y","frame":null},{"y":["BUKIT MERTAJAM","KENINGAU","SULTANAH MALIHA LANGKAWI","BANTING","KAPIT","PORT DICKSON","SRI AMAN","PEKAN","SARIKEI","SERI MANJUNG","SERIAN","LABUAN","LAHAD DATU","SLIM RIVER","BENTONG","KUALA LIPIS","ENCHE' BESAR HAJJAH KHALSOM KLUANG"],"x":[-7,-3,-3,-2,-1,-1,-1,0,0,0,0,1,1,1,2,2,8],"type":"scatter","mode":"markers","showlegend":true,"name":"MINOR","marker":{"color":"rgba(190,190,190,0.97)","size":[55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55],"sizemode":"area","line":{"color":"rgba(190,190,190,1)"}},"textfont":{"color":"rgba(190,190,190,0.97)","size":55},"error_y":{"color":"rgba(190,190,190,0.97)","width":55},"error_x":{"color":"rgba(190,190,190,0.97)","width":55},"line":{"color":"rgba(190,190,190,0.97)","width":55},"xaxis":"x","yaxis":"y","frame":null},{"y":["BESUT","PAPAR","SIK"],"x":[0,0,0],"type":"scatter","mode":"markers","showlegend":true,"name":"NONSPECIALIST","marker":{"color":"rgba(173,216,230,0.97)","size":[55,55,55],"sizemode":"area","line":{"color":"rgba(173,216,230,1)"}},"textfont":{"color":"rgba(173,216,230,0.97)","size":55},"error_y":{"color":"rgba(173,216,230,0.97)","width":55},"error_x":{"color":"rgba(173,216,230,0.97)","width":55},"line":{"color":"rgba(173,216,230,0.97)","width":55},"xaxis":"x","yaxis":"y","frame":null}],"layout":{"xaxis":{"domain":[0,1],"automargin":true,"anchor":"y","title":"Number of specialists"},"yaxis":{"domain":[0,1],"automargin":true,"type":"category","categoryorder":"array","categoryarray":["TENGKU AMPUAN RAHIMAH KLANG","SUNGAI BULOH","SULTANAH NUR ZAHIRAH KUALA TERENGGANU","TUANKU FAUZIAH","MELAKA","SULTANAH AMINAH JOHOR BAHRU","TELUK INTAN","BUKIT MERTAJAM","SULTANAH NORA ISMAIL BATU PAHAT","AMPANG","TUANKU AMPUAN NAJIHAH KUALA PILAH","SHAH ALAM","SULTAN ABDUL HALIM SG PETANI","SULTAN HJ AHMAD SHAH TEMERLOH","TAIPING","TUANKU JA'AFAR SEREMBAN","KENINGAU","KUALA LUMPUR","SULTANAH MALIHA LANGKAWI","BANTING","BINTULU","KEMAMAN","SULTAN ISMAIL PETRA KUALA KRAI","KAPIT","KULIM","PORT DICKSON","SRI AMAN","BESUT","PAPAR","PEKAN","SARIKEI","SEBERANG JAYA","SERI MANJUNG","SERIAN","SIK","TANAH MERAH","KAJANG","LABUAN","LAHAD DATU","SLIM RIVER","BENTONG","KUALA LIPIS","PAKAR SULTANAH FATIMAH MUAR","SEGAMAT","SULTANAH BAHIYAH","DUCHESS OF KENT SANDAKAN","SULTAN ISMAIL JOHOR BAHRU","TAWAU","MIRI","QUEEN ELIZABETH 2","SIBU","ENCHE' BESAR HAJJAH KHALSOM KLUANG","PUTRAJAYA","TENGKU AMPUAN AFZAN KUANTAN","UMUM SARAWAK","RAJA PERMAISURI BAINUN","RAJA PEREMPUAN ZAINAB 2 KOTA BHARU","SERDANG","PULAU PINANG","SELAYANG","QUEEN ELIZABETH 1"],"anchor":"x","title":"","tickfont":{"size":8}},"annotations":[],"shapes":[],"images":[],"margin":{"b":40,"l":60,"t":25,"r":10},"hovermode":"closest","showlegend":true,"title":"Specialist Excesses and Shortages 2022","legend":{"x":0.77000000000000002,"y":0.80000000000000004}},"attrs":{"77462431e1b3":{"y":{},"x":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","mode":"markers","color":{},"colors":["#150377","salmon","grey","light blue"],"showlegend":true,"alpha":0.96999999999999997,"size":13,"inherit":true}},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"subplot":true,"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p class="caption">
+Figure 3: Specialist Excesses and Shortages. Negative values are shortages, and positive values are excesses. See equations 1-3 for formulae to derive values.
+</p>
+</div>
+</div>
+<p><br></p>
+<p><a href="#top">Return to table of contents</a></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
@@ -2148,6 +2218,15 @@ body{ /* Normal  */
 <div class="d-appendix">
 </div>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->

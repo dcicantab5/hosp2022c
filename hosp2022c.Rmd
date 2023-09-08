@@ -1,0 +1,221 @@
+---
+title: "General Internal Medicine Shared Admissions Workload 2022"
+author:
+  - name: Dr Saiful Safuan Md Sani 
+    url: https://saifulsafuan.com
+    affiliation: Clinical Research Centre & Department of Medicine Hospital Kuala Lumpur
+  - name: Dr Yoon Chee Kin
+    affiliation: Clinical Research Centre & Department of Medicine Hospital Pulau Pinang
+date: "`2023-09-01`"
+output:
+  distill::distill_article:
+    self_contained: yes
+    toc: yes
+    toc_float: yes
+always_allow_html: yes
+---
+
+
+```{r setup, include=FALSE}
+# first pub 17 Jan 2022
+library(knitr)
+library(distill)
+library(googlesheets4)
+library(gsheet)
+library(dplyr)
+library(ggplot2)
+library(plotly)
+library(DT)
+#library(kableExtra)
+#library(zoo) # moving averages
+#library(RcppRoll) # running total
+
+#  distill::distill_article:
+#    self_contained: yes
+#    toc: yes
+#    toc_depth: 2
+#    _includes: analytics.html
+
+```
+```{r urlshare, include=FALSE}
+urlshare <- "https://docs.google.com/spreadsheets/d/1z_1ydaDB0Fhz5FJ2RUtfKb_0bYafuhtebDP3y9L2-vo/edit#gid=1618837026" ### 
+hosp2022share <- gsheet2tbl(urlshare, "adm") 
+glimpse(hosp2022share)
+```
+
+```{r include=FALSE}
+hosp2022share$type <- as.factor(hosp2022share$type)
+hosp2022share$type <- relevel(hosp2022share$type, "STATE")
+
+rownames(hosp2022share) <- hosp2022share$hospital
+rownames(hosp2022share)
+
+#col3 <- c(`state` = "#150377", `major` = "salmon", `minor` = "grey")
+
+hosp2022share$hospital <- factor(hosp2022share$hospital,
+                   levels = hosp2022share$hospital)
+
+datashare <- arrange(hosp2022share, type, desc(spec_nshare_per_1000_adm))
+```
+## Shared General Medical Admissions Workload
+```{r, fig.cap="General Medical Admissions.", out.extra="class=external",  fig.width=8, fig.height=10, message=FALSE, echo=FALSE, warning=FALSE}
+#### Current workload
+col3 <- c(`STATE` = "#150377", `MAJOR` = "salmon", `MINOR` = "grey", `NONSPECIALIST` = "light blue")
+
+datashare_adm <- arrange(hosp2022share, adm)
+datashare_adm$hospital <- factor(datashare_adm$hospital,
+                   levels = datashare_adm$hospital)
+
+p <- plot_ly(datashare_adm, y = ~factor(hospital), x = ~adm, alpha = 0.97, size = 7)
+subplot(
+  add_bars(p, color = ~factor(type), colors = col3,  showlegend = TRUE) 
+) %>% layout(
+     title = "Shared General Medical Admissions Workload<br><sup></sup>",
+     yaxis = list(title = "",
+     categoryorder = "array",
+     categoryarray = ~datashare_adm$hospital, tickfont = list(size = 10)),
+     xaxis = list(title = "Number of admissions")
+) %>% layout(legend = list(x = 0.77, y = 0.9)) %>% 
+ layout(annotations = 
+ list(x = 1, y = 0.51, text = "", 
+      showarrow = F, xref='paper', yref='paper', 
+      xanchor='right', yanchor='auto', xshift=0, yshift=0,
+      font=list(size=12, color="grey"))
+ )
+
+
+#options(browser = 'false')
+#api_create(p, filename = "hosp2019_admission")
+```
+<a href="#top">Return to table of contents</a>
+
+\pagebreak
+
+## Specialist (per 1000 Admissions) Handling Shared General Medical Admissions Workload by Type of Facility 2022
+```{r, fig.cap="Specialist per 1000 Admissions.", out.extra="class=external", message=FALSE, echo=FALSE, warning=FALSE}
+states <- datashare %>% filter(type == 'STATE')
+states$hospital <- factor(states$hospital)
+#str(states)
+
+p_states <- plot_ly(states, y = ~hospital, x = ~spec_nshare_per_1000_adm, type = 'bar',  name = 'States', color = ~factor(type), colors = col3)
+p_states <- p_states %>% add_trace(states, y = ~hospital, x = ~median, 
+                      type = 'scatter', 
+                      name = 'Median',
+                      mode = "lines", 
+                      line = list(color = "crimson", dash = 'dot', width = 7), 
+                      opacity = 0.97)
+p_states <- p_states %>% layout(xaxis = list(title = 'Number of specialists per 1000 admissions'), yaxis = list(title = '', categoryorder = "total ascending", tickfont = list(size = 8)))
+
+#p_states
+
+major <- datashare %>% filter(type == 'MAJOR')
+major$hospital <- factor(major$hospital)
+#str(major)
+
+p_major <- plot_ly(major, y = ~hospital, x = ~spec_nshare_per_1000_adm, type = 'bar',  name = 'Major', color = ~factor(type), colors = col3)
+p_major <- p_major %>% add_trace(major, y = ~hospital, x = ~median, 
+                      type = 'scatter', 
+                      name = 'Median',
+                      mode = "lines", 
+                      line = list(color = "crimson", dash = 'dot', width = 7), 
+                      opacity = 0.97)
+p_major <- p_major %>% layout(xaxis = list(title = 'Number of specialists per 1000 admissions'), yaxis = list(title = '', categoryorder = "total ascending", tickfont = list(size = 8)))
+
+#p_major
+
+minor <- datashare %>% filter(type == 'MINOR')
+minor$hospital <- factor(minor$hospital)
+#str(minor)
+
+p_minor <- plot_ly(minor, y = ~hospital, x = ~spec_nshare_per_1000_adm, type = 'bar',  name = 'Minor', color = ~factor(type), colors = col3)
+p_minor <- p_minor %>% add_trace(minor, y = ~hospital, x = ~median, 
+                      type = 'scatter', 
+                      name = 'Median',
+                      mode = "lines", 
+                      line = list(color = "crimson", dash = 'dot', width = 7), 
+                      opacity = 0.97)
+p_minor <- p_minor %>% layout(xaxis = list(title = 'Number of specialists per 1000 admissions'), yaxis = list(title = '', categoryorder = "total ascending", tickfont = list(size = 8)))
+
+#p_minor
+
+nonspecialist <- datashare %>% filter(type == 'NONSPECIALIST')
+nonspecialist$hospital <- factor(nonspecialist$hospital)
+#str(nonspecialist)
+
+p_nonspecialist <- plot_ly(nonspecialist, y = ~hospital, x = ~spec_nshare_per_1000_adm, type = 'bar',  name = 'Nonspecialist', color = ~factor(type), colors = col3)
+p_nonspecialist <- p_nonspecialist %>% add_trace(nonspecialist, y = ~hospital, x = ~median, 
+                      type = 'scatter', 
+                      name = 'Median',
+                      mode = "lines", 
+                      line = list(color = "crimson", dash = 'dot', width = 7), 
+                      opacity = 0.97)
+p_nonspecialist <- p_nonspecialist %>% layout(xaxis = list(title = 'Number of specialists per 1000 admissions'), yaxis = list(title = '', categoryorder = "total ascending", tickfont = list(size = 8)))
+
+#p_nonspecialist
+```
+
+```{r, fig.cap="Specialist (per 1000 Admissions) Handling Shared General Medical Admissions Workload 2022.", out.extra="class=external",  fig.width=8, fig.height=10, message=FALSE, echo=FALSE, warning=FALSE}
+subplot(p_states, p_major, p_minor, nrows = 3, heights = c(0.25, 0.5, 0.25), shareX = TRUE, shareY = TRUE) %>% 
+  layout(title = list(text = "Specialist (per 1000 Admissions) by Type of Facility 2022"))
+
+#options(browser = 'false')
+#api_create(p, filename = "hosp2019_spec_n_per_1000_adm")
+```
+
+## Specialist Adequacy Calculation
+
+<br> 
+
+\begin{equation}
+{Adequacy = {Number\;of\;specialists}_{Actual} - {Number\;of\;specialists}_{Median}}
+(\#eq:Adeq)
+\end{equation}
+
+<br>
+
+derived from 
+
+\begin{equation}
+{{Number\;of\; specialists}_{Median} = {Manpower\;Rate}_{Median} \times  \left( \displaystyle \frac{Admissions}{1000}\right) }
+(\#eq:MRn)
+\end{equation} 
+
+<br>
+
+derived from
+
+\begin{equation}
+{Manpower\;Rate = {Number\;of\; specialists} \div \left( \displaystyle \frac{Admissions}{1000}\right) }
+(\#eq:MR)
+\end{equation} 
+
+<br>
+
+<a href="#top">Return to table of contents</a>
+
+\pagebreak
+
+## Specialist Adequacy 2022
+```{r, fig.cap="\\label{fig:myfig4}Specialist Excesses and Shortages. Negative values are shortages, and positive values are excesses. See equations 1-3 for formulae to derive values.", out.extra="class=external",  fig.width=8, fig.height=8, message=FALSE, echo=FALSE, warning=FALSE}
+
+col3 <- c(`STATE` = "#150377", `MAJOR` = "salmon", `MINOR` = "grey", `NONSPECIALIST` = "light blue")
+
+adeq <- arrange(hosp2022share, spec_adequacy)
+adeq$hospital <- factor(adeq$hospital,
+                   levels = adeq$hospital)
+
+p <- plot_ly(adeq, y = ~factor(hospital), x = ~spec_adequacy)
+subplot(
+  add_markers(p, color = ~factor(type), colors = col3,  showlegend = TRUE, alpha = 0.97, size = 13) 
+) %>% layout(
+     title = "Specialist Excesses and Shortages 2022",
+     yaxis = list(title = "",
+     categoryorder = "array",
+     categoryarray = ~adeq$hospital, tickfont = list(size = 8)),
+     xaxis = list(title = "Number of specialists")
+) %>% layout(legend = list(x = 0.77, y = 0.8))
+
+```
+<br>
+
+<a href="#top">Return to table of contents</a>

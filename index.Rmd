@@ -1,10 +1,15 @@
 ---
-title: "hosp2022c"
-description: |
-  Welcome to the website. I hope you enjoy it!
+title: "General Medical Admissions Workload 2022 and Specialist Adequacy"
+description: "***Curated by Dr Saiful Safuan Md Sani*** \n<br> _MRCP(London) MRCP(UK)
+  MA(Cantab) MBBS(London)_\n<br> _Consultant Physician (Acute Internal Medicine)_\n"
 site: distill::distill_website
 ---
 
+<style type="text/css">
+body{ /* Normal  */
+      font-size: 8px;
+  }
+</style>
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 
@@ -15,4 +20,15 @@ knitr::opts_chunk$set(echo = FALSE)
 # https://rstudio.github.io/distill/publish_website.html#github-pages
 
 ```
+***Workload should dictate amount of manpower.***
 
+<br>
+
+**CAUTION**: fair distribution requires consideration and information on:
+<br> 1. outpatient clinic volume, 
+<br> 2. daycare volume,
+<br> 3. procedure volume,
+<br> 4. referral workload, 
+<br> 5. fulfilling demands for up-to-date treatment provided by a subspecialty.
+
+<br>
