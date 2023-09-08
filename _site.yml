@@ -1,0 +1,12 @@
+name: "hosp2022c"
+title: "hosp2022c"
+description: |
+  hosp2022c
+output_dir: "docs"
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+output: distill::distill_article
