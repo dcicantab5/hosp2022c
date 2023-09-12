@@ -53,7 +53,7 @@ glimpse(explorer_shared)
 
 col3 <- c(`STATE` = "#C60000", 
           `MAJOR` = "#1E434C", 
-          `MINOR` = "#9B4F0F", 
+          `MINOR` = "#7AA802", 
           `NONSPECIALIST` = "#C99E10")
 
 #dataexplorer_shared <- arrange(explorer_shared, desc(spec_adequacy))
