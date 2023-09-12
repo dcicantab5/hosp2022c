@@ -6,6 +6,8 @@ author:
     affiliation: Clinical Research Centre & Department of Medicine Hospital Kuala Lumpur
   - name: Dr Yoon Chee Kin
     affiliation: Clinical Research Centre & Department of Medicine Hospital Pulau Pinang
+  - name: Dr Cheah Wee Kooi
+    affiliation: Clinical Research Centre & Department of Medicine Hospital Taiping
 date: "`2023-09-12`"
 output:
   distill::distill_article:
