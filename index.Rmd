@@ -1,6 +1,6 @@
 ---
 title: "General Medical Admissions Workload 2022 and Specialist Adequacy"
-description: "***Curated by Dr Saiful Safuan Md Sani*** \n<br> _MRCP(London) MRCP(UK)
+description: "***Workload Dashboard Curated by Dr Saiful Safuan Md Sani*** \n<br> _MRCP(London) MRCP(UK)
   MA(Cantab) MBBS(London)_\n<br> _Consultant Physician (Acute Internal Medicine)_\n"
 site: distill::distill_website
 ---
