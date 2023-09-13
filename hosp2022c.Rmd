@@ -55,7 +55,7 @@ glimpse(explorer_shared)
 
 col3 <- c(`STATE` = "#C60000", 
           `MAJOR` = "#1E434C", 
-          `MINOR` = "#7AA802", 
+          `MINOR` = "#89DA59", 
           `NONSPECIALIST` = "#C99E10")
 
 #dataexplorer_shared <- arrange(explorer_shared, desc(spec_adequacy))
@@ -67,13 +67,15 @@ col3 <- c(`STATE` = "#C60000",
 fig <- explorer_shared
 fig <- fig %>% filter(year == '2019')
 
-figs <- fig %>% plot_ly(x = ~adm, y = ~hospital, color = ~type, colors = col3, symbol = ~year, type = "scatter", mode = "markers", showlegend = T) %>% layout(
+figs <- fig %>% plot_ly(x = ~adm, y = ~hospital, color = ~type, colors = col3, symbol = ~year, type = "scatter", mode = "markers", marker = list(
+      size = 12
+      ), opacity = 0.61, showlegend = T) %>% layout(
      title = "General Medical Admissions 2019",
      yaxis = list(title = "",
-     categoryarray = ~fig$hospital, tickfont = list(size = 8),
+     categoryarray = ~fig$hospital, tickfont = list(size = 12),
      categoryorder = "array",
      autorange = "reversed"),
-     xaxis = list(title = "Number of specialists"),
+     xaxis = list(title = "Number of admissions"),
      legend = list(x = 0.97, y = 0.95)
      )
 
@@ -90,10 +92,12 @@ fig <- explorer_shared
 fig <- fig %>% filter(year == '2019')
 fig <- arrange(fig, desc(spec_n_share))
 
-figs <- fig %>% plot_ly(x = ~spec_n_share, y = ~hospital, color = ~type, colors = col3, symbol = ~year, type = "scatter", mode = "markers", showlegend = T) %>% layout(
+figs <- fig %>% plot_ly(x = ~spec_n_share, y = ~hospital, color = ~type, colors = col3, symbol = ~year, type = "scatter", mode = "markers", marker = list(
+      size = 12
+      ), opacity = 0.61, showlegend = T) %>% layout(
      title = "Number of Specialists 2019",
      yaxis = list(title = "",
-     categoryarray = ~fig$hospital, tickfont = list(size = 8),
+     categoryarray = ~fig$hospital, tickfont = list(size = 10),
      categoryorder = "array",
      autorange = "reversed"),
      xaxis = list(title = "Number of specialists"),
@@ -114,10 +118,12 @@ fig <- explorer_shared
 fig <- fig %>% filter(year == '2019')
 fig <- arrange(fig, desc(spec_nshare_per_1000_adm))
 
-figs <- fig %>% plot_ly(x = ~spec_nshare_per_1000_adm, y = ~hospital, color = ~type, colors = col3, symbol = ~year, type = "scatter", mode = "markers", showlegend = T) %>% layout(
+figs <- fig %>% plot_ly(x = ~spec_nshare_per_1000_adm, y = ~hospital, color = ~type, colors = col3, symbol = ~year, type = "scatter", mode = "markers", marker = list(
+      size = 12
+      ), opacity = 0.61, showlegend = T) %>% layout(
      title = "Specialist per 1000 Admissions 2019",
      yaxis = list(title = "",
-     categoryarray = ~fig$hospital, tickfont = list(size = 8),
+     categoryarray = ~fig$hospital, tickfont = list(size = 12),
      categoryorder = "array",
      autorange = "reversed"),
      xaxis = list(title = "Number of specialists"),
@@ -226,13 +232,15 @@ derived from
 
 # Specialist Excess / Shortages 2019
 
-```{r adequacy2019, fig.cap="Specialist Excess / Shortages 2019 (Shared Admissions Workload).", out.extra="class=external",  fig.width=8, fig.height=8, message=FALSE, echo=FALSE, warning=FALSE}
+```{r adequacy2019, fig.cap="Specialist Excess / Shortages 2019 (Shared Admissions Workload).", out.extra="class=external",  fig.width=10, fig.height=10, message=FALSE, echo=FALSE, warning=FALSE}
 
 fig <- explorer_shared
 fig <- fig %>% filter(year == '2019')
 fig <- arrange(fig, desc(spec_adequacy))
 
-figs <- fig %>% plot_ly(x = ~spec_adequacy, y = ~hospital, color = ~type, colors = col3, symbol = ~year, type = "scatter", mode = "markers", showlegend = T) %>% layout(
+figs <- fig %>% plot_ly(x = ~spec_adequacy, y = ~hospital, color = ~type, colors = col3, symbol = ~year, type = "scatter", mode = "markers", marker = list(
+      size = 12
+      ), opacity = 0.61, showlegend = T) %>% layout(
      title = "Specialist Excess / Shortages 2019",
      yaxis = list(title = "",
      categoryarray = ~fig$hospital, tickfont = list(size = 12),
@@ -257,7 +265,9 @@ fig <- explorer_shared
 fig <- fig %>% filter(type == 'STATE')
 fig <- arrange(fig, year, desc(spec_adequacy))
 
-figs <- fig %>% plot_ly(x = ~spec_adequacy, y = ~hospital, color = ~type, colors = col3, symbol = ~year, type = "scatter", mode = "markers", showlegend = T) %>% layout(
+figs <- fig %>% plot_ly(x = ~spec_adequacy, y = ~hospital, color = ~type, colors = col3, symbol = ~year, type = "scatter", mode = "markers", marker = list(
+      size = 12
+      ), opacity = 0.61, showlegend = T) %>% layout(
      title = "Specialist Excesses and Shortages at State Hospitals 2019 to 2022",
      yaxis = list(title = "",
      categoryarray = ~fig$hospital, tickfont = list(size = 12),
@@ -281,7 +291,9 @@ fig <- explorer_shared
 fig <- fig %>% filter(type == 'MAJOR')
 fig <- arrange(fig, year, desc(spec_adequacy))
 
-figs <- fig %>% plot_ly(x = ~spec_adequacy, y = ~hospital, color = ~type, colors = col3, symbol = ~year, type = "scatter", mode = "markers", showlegend = T) %>% layout(
+figs <- fig %>% plot_ly(x = ~spec_adequacy, y = ~hospital, color = ~type, colors = col3, symbol = ~year, type = "scatter", mode = "markers", marker = list(
+      size = 12
+      ), opacity = 0.61, showlegend = T) %>% layout(
      title = "Specialist Excesses and Shortages at Major Hospitals 2019 to 2022",
      yaxis = list(title = "",
      categoryarray = ~fig$hospital, tickfont = list(size = 12),
@@ -305,7 +317,9 @@ fig <- explorer_shared
 fig <- fig %>% filter(type == 'MINOR')
 fig <- arrange(fig, year, desc(spec_adequacy))
 
-figs <- fig %>% plot_ly(x = ~spec_adequacy, y = ~hospital, color = ~type, colors = col3, symbol = ~year, type = "scatter", mode = "markers", showlegend = T) %>% layout(
+figs <- fig %>% plot_ly(x = ~spec_adequacy, y = ~hospital, color = ~type, colors = col3, symbol = ~year, type = "scatter", mode = "markers", marker = list(
+      size = 12
+      ), opacity = 0.61, showlegend = T) %>% layout(
      title = "Specialist Excesses and Shortages at Minor Hospitals 2019 to 2022",
      yaxis = list(title = "",
      categoryarray = ~fig$hospital, tickfont = list(size = 12),
@@ -330,7 +344,9 @@ fig <- explorer_shared
 fig <- fig %>% filter(type == 'STATE')
 fig <- arrange(fig, year, desc(spec_n_share))
 
-figs <- fig %>% plot_ly(x = ~spec_n_share, y = ~hospital, color = ~type, colors = col3, symbol = ~year, type = "scatter", mode = "markers", showlegend = T) %>% layout(
+figs <- fig %>% plot_ly(x = ~spec_n_share, y = ~hospital, color = ~type, colors = col3, symbol = ~year, type = "scatter", mode = "markers", marker = list(
+      size = 12
+      ), opacity = 0.61, showlegend = T) %>% layout(
      title = "Number of Specialists at State Hospitals 2019 to 2022",
      yaxis = list(title = "",
      categoryarray = ~fig$hospital, tickfont = list(size = 12),
@@ -354,7 +370,9 @@ fig <- explorer_shared
 fig <- fig %>% filter(type == 'MAJOR')
 fig <- arrange(fig, year, desc(spec_n_share))
 
-figs <- fig %>% plot_ly(x = ~spec_n_share, y = ~hospital, color = ~type, colors = col3, symbol = ~year, type = "scatter", mode = "markers", showlegend = T) %>% layout(
+figs <- fig %>% plot_ly(x = ~spec_n_share, y = ~hospital, color = ~type, colors = col3, symbol = ~year, type = "scatter", mode = "markers", marker = list(
+      size = 12
+      ), opacity = 0.61, showlegend = T) %>% layout(
      title = "Number of Specialists at Major Hospitals 2019 to 2022",
      yaxis = list(title = "",
      categoryarray = ~fig$hospital, tickfont = list(size = 12),
@@ -378,7 +396,9 @@ fig <- explorer_shared
 fig <- fig %>% filter(type == 'MINOR')
 fig <- arrange(fig, year, desc(spec_n_share))
 
-figs <- fig %>% plot_ly(x = ~spec_n_share, y = ~hospital, color = ~type, colors = col3, symbol = ~year, type = "scatter", mode = "markers", showlegend = T) %>% layout(
+figs <- fig %>% plot_ly(x = ~spec_n_share, y = ~hospital, color = ~type, colors = col3, symbol = ~year, type = "scatter", mode = "markers", marker = list(
+      size = 12
+      ), opacity = 0.61, showlegend = T) %>% layout(
      title = "Number of Specialists at Minor Hospitals 2019 to 2022",
      yaxis = list(title = "",
      categoryarray = ~fig$hospital, tickfont = list(size = 12),
@@ -403,13 +423,15 @@ fig <- explorer_shared
 fig <- fig %>% filter(type == 'STATE')
 fig <- arrange(fig, year, desc(adm))
 
-figs <- fig %>% plot_ly(x = ~adm, y = ~hospital, color = ~type, colors = col3, symbol = ~year, type = "scatter", mode = "markers", showlegend = T) %>% layout(
+figs <- fig %>% plot_ly(x = ~adm, y = ~hospital, color = ~type, colors = col3, symbol = ~year, type = "scatter", mode = "markers", marker = list(
+      size = 12
+      ), opacity = 0.61, showlegend = T) %>% layout(
      title = "General Medical Admissions at State Hospitals 2019 to 2022",
      yaxis = list(title = "",
      categoryarray = ~fig$hospital, tickfont = list(size = 12),
      categoryorder = "array",
      autorange = "reversed"),
-     xaxis = list(title = "Number of specialists"),
+     xaxis = list(title = "Number of admissions"),
      legend = list(x = 0.97, y = 0.95)
      )
 
@@ -427,16 +449,16 @@ fig <- explorer_shared
 fig <- fig %>% filter(type == 'MAJOR')
 fig <- arrange(fig, year, desc(adm))
 
-figs <- fig %>% plot_ly(x = ~adm, y = ~hospital, color = ~type, colors = col3, symbol = ~year, type = "scatter", mode = "markers", showlegend = T) %>% layout(
+figs <- fig %>% plot_ly(x = ~adm, y = ~hospital, color = ~type, colors = col3, symbol = ~year, type = "scatter", mode = "markers", marker = list(
+      size = 12
+      ), opacity = 0.61, showlegend = T) %>% layout(
      title = "General Medical Admissions at Major Hospitals 2019 to 2022",
      yaxis = list(title = "",
      categoryarray = ~fig$hospital, tickfont = list(size = 12),
      categoryorder = "array",
      autorange = "reversed"),
-     xaxis = list(title = "Number of specialists"),
-     legend = list(x = 0.97, y = 0.95)
-     )
-
+     xaxis = list(title = "Number of admissions"),
+     legend = list(x = 0.97, y = 0.95)) 
 figs
 ```
 <br>
@@ -451,13 +473,15 @@ fig <- explorer_shared
 fig <- fig %>% filter(type == 'MINOR')
 fig <- arrange(fig, year, desc(adm))
 
-figs <- fig %>% plot_ly(x = ~adm, y = ~hospital, color = ~type, colors = col3, symbol = ~year, type = "scatter", mode = "markers", showlegend = T) %>% layout(
+figs <- fig %>% plot_ly(x = ~adm, y = ~hospital, color = ~type, colors = col3, symbol = ~year, type = "scatter", mode = "markers", marker = list(
+      size = 12
+      ), opacity = 0.61, showlegend = T) %>% layout(
      title = "General Medical Admissions at Minor Hospitals 2019 to 2022",
      yaxis = list(title = "",
      categoryarray = ~fig$hospital, tickfont = list(size = 12),
      categoryorder = "array",
      autorange = "reversed"),
-     xaxis = list(title = "Number of specialists"),
+     xaxis = list(title = "Number of admissions"),
      legend = list(x = 0.97, y = 0.95)
      )
 
